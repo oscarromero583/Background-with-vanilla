@@ -13,7 +13,7 @@ function initParticles() {
             y: canvas.height / 2,
             size: Math.random() * 2 + 1,
             speed: Math.random() * 4 + 1,
-            color: `rgba(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255}, 1)`, // Added missing comma
+            color: `rgba(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255}, 1)`,
             angle: Math.random() * Math.PI * 2
         });
     }
@@ -23,7 +23,7 @@ function drawWorm() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     for (const particle of particles) {
-        ctx.beginPath(); // Corrected spelling
+        ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
         ctx.fillStyle = particle.color;
         ctx.fill();
