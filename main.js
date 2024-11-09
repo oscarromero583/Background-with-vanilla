@@ -28,13 +28,13 @@ function drawWorm() {
         ctx.fillStyle = particle.color;
         ctx.fill();
 
-        // Corrected spelling and function
+       
         particle.x += Math.cos(particle.angle) * particle.speed;
-        particle.y += Math.sin(particle.angle) * particle.speed; // Fixed to use sine for `y` direction
+        particle.y += Math.sin(particle.angle) * particle.speed;
 
         particle.angle += 0.02;
 
-        // Fixed boundary condition
+       
         if (particle.x < 0 || particle.x > canvas.width || particle.y < 0 || particle.y > canvas.height) {
             particle.x = canvas.width / 2;
             particle.y = canvas.height / 2;
